@@ -1,0 +1,111 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[croatian]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{fancyhdr} % prored, numeriranje stranice...
+\usepackage{amsfonts}
+\usepackage{setspace}% za postavljanje praznina
+\usepackage{color}
+\usepackage{wasysym}
+\usepackage{bbm}
+\usepackage{lscape}
+\usepackage{filecontents}
+\usepackage{multicol}
+\usepackage{url}
+\DeclareMathOperator {\sg}{sg}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\thepage}
+\usepackage{paralist}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,automata}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\setlength\parindent{24pt}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
+
+\begin{document}
+\renewcommand{\bibname}{Literatura}%ne želim da mi piše bibliografija već literatura
+\begin{titlepage}
+\begin{center}
+\newtheorem{thm}{Teorem}[section] %u svakom poglavlju teoremi se numeriraju zasebno
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definicija} %enumeracija definicija jednaka enum teorem
+\newtheorem{exmp}[thm]{Primjer} % analogno s primjerima
+\newtheorem{nap}[thm]{Napomena} % analogno s naomenom
+
+\LARGE Sveučilište u Zagrebu \\[1cm] Prirodoslovno - matematički fakultet \\[1cm] Matematički odsjek\\[3cm]
+
+\Large Eliptičke krivulje u kriptografiji \\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries 3. domaća zadaća}\\[0.4cm]
+
+\HRule \\[9cm]
+
+% Autor i mentor -> postavljanje ovoga na dno stranice...
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Student:\\}
+Antonio Kovačić
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Nastavnik:\\}
+Doc. dr. sc. Filip Najman
+\end{flushright}
+\end{minipage}
+
+
+\vfill
+
+% Bottom of the page
+{\large Zagreb, \today}
+
+\end{center}
+\end{titlepage}
+\pagestyle{plain} % No headers, just page numbers
+\pagenumbering{roman} % Roman numerals
+\setcounter{page}{1}
+\begingroup
+\let\cleardoublepage\relax
+\tableofcontents
+
+\newpage
+
+
+\begin{spacing}{1.5}
+\section{Problem}
+\begin{enumerate}
+\item Nađite racionalan broj $t$ sa svojstvom da za eliptičku krivulju 
+\[E \, : \, y^2 =x(x+t)(x+t+38)\]
+vrijedi $E(\mathbb{Q})_{\textrm{tors}}=\mathbb{Z}_2 \times \mathbb{Z}_4$.
+\item Odredite rang eliptičke krivulje nad $\mathbb{Q}$ zadane jednadžbom
+\[y^2=x^3-22x\]
+\item Za polinom
+\[p(x) = (x - 4)(x - 3)(x - 2)x(x + 1)(x + 2)(x + 3)(x + 4),\]
+odredite polinome $q(x), r(x) \in \mathbb{Q}[x]$ takve da vrijedi $p(x)=(q(x))^2-r(x)$ i $\deg r \leq 3$
+\end{enumerate}
+\newpage
+\section{Rješenje}
+\subsection{1. zadatak}
+\end{spacing}
+\end{document}
