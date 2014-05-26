@@ -107,5 +107,36 @@ odredite polinome $q(x), r(x) \in \mathbb{Q}[x]$ takve da vrijedi $p(x)=(q(x))^2
 \newpage
 \section{Rješenje}
 \subsection{1. zadatak}
+Prema \cite[p.~28]{ekk} je opći oblik krivulje s torzijskom podgrupom $\mathbb{Z}_2 \times \mathbb{Z}_4$ oblika:
+\begin{equation}
+\label{eq:opciOblik}	
+y^2=x(x+r^2)(x+s^2), \quad r,s \in \mathbb{Q}
+\end{equation}
+Prema tome slijedi:
+\begin{align}
+\label{eq:jdba1}
+t &= s^2 \\
+t+38 &= r^2
+\end{align}
+Iz čega slijedi da:
+\begin{align}
+\label{eq:konZ}
+r^2-s^2=38
+\end{align}
+No ne postoje $(r,s) \in \mathbb{Z}^2$ koji zadovoljavaju \eqref{eq:konZ}. Zaključujemo da je $(r,s) \in (\mathbb{Q}\backslash \mathbb{Z})^2$, a onda i $t \in \mathbb{Q}\backslash\mathbb{Z}$.
+Pokušajmo vidjeti postoji li $a \in \mathbb{Z}$ tako da za $t$ vrijedi:
+\begin{align}
+	\label{eq:odnosZ}
+	t=\left(a+\frac{1}{2}\right)^2, \qquad	t+38=\left(a+\frac{3}{2}\right)^2
+\end{align}
+Iz \eqref{eq:odnosZ} se lako dobije $a=18$, pa je $s=\frac{37}{2}$, a $r=\frac{39}{2}$. Iz čega slijedi da je $\mathbb{Z}_2 \times \mathbb{Z}_4$ podgrupa od  $E(\mathbb{Q})_{\textrm{tors}}$. Još je ostalo provjeriti da $E(\mathbb{Q})_{\textrm{tors}} \neq \mathbb{Z}_2 \times \mathbb{Z}_8$ jer imaju isti oblik, no prema:
+\[\textrm{Za } E \, : \, y^2=x(x+r^2)(x+s^2), E(\mathbb{Q})_{\textrm{tors}} \textrm{ izomorfna s } \mathbb{Z}_2 \times \mathbb{Z}_8 \textrm{ akko } \] 
+\[rs, rs+r^2, rs+s^2 \textrm{ kvadrati u }\mathbb{Q} \]
+No $\frac{37\cdot 39}{4}=\frac{1443}{4}$ nije kvadrat u $\mathbb{Q}$, pa slijedi tražena tvrdnja za $t=\frac{1369}{4}$.
+
 \end{spacing}
+\newpage
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{lit}
 \end{document}
