@@ -133,7 +133,141 @@ Iz \eqref{eq:odnosZ} se lako dobije $a=18$, pa je $s=\frac{37}{2}$, a $r=\frac{3
 \[\textrm{Za } E \, : \, y^2=x(x+r^2)(x+s^2), E(\mathbb{Q})_{\textrm{tors}} \textrm{ izomorfna s } \mathbb{Z}_2 \times \mathbb{Z}_8 \textrm{ akko } \] 
 \[rs, rs+r^2, rs+s^2 \textrm{ kvadrati u }\mathbb{Q} \]
 No $\frac{37\cdot 39}{4}=\frac{1443}{4}$ nije kvadrat u $\mathbb{Q}$, pa slijedi tražena tvrdnja za $t=\frac{1369}{4}$.
+\newpage
+\subsection{2. zadatak}
+Prema \cite[p.~38]{ekk} za krivulju $E \, : \, y^3=x^3-22x$ je njena pripadna 2-izogena krivulja dana sa $E' \, : \, y^3=x^3 + 4 \cdot 22 x=x^3 +88x$.
+Za računanje ranga krivulje $E$ promatramo odgovarajuća preslikavanja $\alpha$ i $\beta$ te određujemo $|Im(\alpha)|$ i $|Im(\beta)|$.\\
+Rješenje za $Im(\alpha)$:\\
+\[E \, : \, y^3=x^3-22x \to a=0, b=-22\]
+Prema tome tražimo $(M,e,N)$  takve da jednadžba:
+\[b_1 M^4 + b_2 e^4=N^2\]
+ima rješenja, pri čemu vrijedi:
+\begin{itemize}
+\item $b_1 $ djelitelj od $22$ koji je kvadratno slobodan
+\item $b_1 b_2=-22$
+\item $(M,e)=1$, gdje $(M,e)$ označava najvećeg zajedničkog djelitelja od $M$ i $e$
+\end{itemize}
+Naša jednadžba za $b_1$ i $b_2$ izgleda simetrično pa je dovoljno provjeravati egzistenciju rješenja za parove djetitelja:
+\begin{enumerate}
+\item $b_1 \in \{1,-22\} \to (M,e,N)=(1,0,1)$ za $b_1=1$, a za $b_1=-46$ je rješenje $(M,e,N)=(0,1,1)$
+\item $b_1 \in \{-2, 11\} \to$ Jednadžba izgleda:
+\[-2M^4 + 11e^4=N^2\]
+I ima rješenje $(M,e,N)=(-1,1,3)$
+\item $b_1 \in \{2,-11\} \to$ Jednadžba izgleda:
+\[-11M^4+2e^4=N^2\] 
+U slučaju da je $M$ paran, $e$ mora biti neparan jer $(M,e)=1$, pa onda slijedi i da $N$ mora biti paran:
+\[M=2k, N=2l, \textrm{ gdje k i l cijeli brojevi }\]
+\[2e^4=11 \cdot 2^4 k^4 + 2^2 l^2 \to e^4=2\cdot (2^2 k^4 + l^3)\]
+Pa imamo da $e^4$ mora biti paran, a onda i $e$ mora biti djeljiv s $2$, a to je kontradikcija  jer je i $M$ djeljiv s 2 pa bi imali $2|(M,e)$.\\
+U slučaju da je $M$ neparan, slijedi i da $N$ mora biti neparan. 
+Imamo onda:
+\[M^4 \equiv N^2 \equiv 1 (\textrm{mod} \, 8) \to 11M^4 \equiv 3 (\textrm{mod} \, 8)\]
+Pa slijedi da je:
+\[2e^4\equiv 4 (\textrm{mod} 8) \to e^4\equiv 2 (\textrm{mod } 4)\]
+Provjeravamo vrijedi li gornja kongruencija za $x \in \{0,1,2,3\}$ i lako se dobije da ona nema riješenja.
+\item $b \in \{-1, 22\} \to$ Jednadžba izgleda:
+\[-1M^4+22e^4=N^2\]
+Postupak je analogan kao u prošlom slučaju, odnosno $M$ i $N$ su iste parnosti:
+Ako su $M$ i $N$ parni, slijedit će da i $e$ mora biti paran, a to je kontradikcija jer bi bilo da $2|(M,e)$.
+Ako pak $M$ i $N$ neparni onda ispada: $22e^4\equiv 2  (\textrm{mod  } 8)$ odnosno $11e^4\equiv 3 e^4\equiv 1  (\textrm{mod } 4)$
+za što ispada da nema riješenja uvrštavanjem elemenata iz $\mathbb{Z}_4$.\\
+\end{enumerate} 
+Zaključujemo da imamo riješenje za 4 različita $b_1$ pa zaključujemo da $|Im(\alpha)|=4$
+Analogno riješavamo za $Im(\beta)$:\\
+\[b_1'M	^4+b_2'e^4=N^2\].
+Gdje $(M,e,N)$ tražimo, a $b_1'$ i $b_2'$ su poznati takvi da vrijedi:
+\begin{itemize}
+\item $b_1'$ djelitelj od $88$ koji je kvadratno slobodan
+\item $b_1' b_2'=88$
+\item $(M,e)=1$, gdje $(M,e)$ označava najvećeg zajedničkog djelitelja od $M$ i $e$
+\end{itemize}
+Iz uvjeta $b_1' b_2'=88$ slijedi da $b_1' > 0$, u suprotnom $b_2'<0$ također pa jednadžba \[b_1'M^4+b_2'e^4=N^2\] uopće nema realnih riješenja. Pozitivni djelitelji od $88$ su: $1,2,4,8,11,22,44,88$ no brojeve $4,8,44$ i $88$ isključujemo kao opcije jer nisu kvadratno slobodnu (dijeli ih 4 (kvadrat broja 2)).
+\begin{enumerate}
+\item $b_1'=1 \to $ Jednadžba izgleda:
+\[M^4+88e^4=N^2\]
+Jedno očito riješenje je $(M,e,N)=(1,0,1)$
+\item $b_1'=2 \to $ Jednadžba izgleda:
+\begin{equation}
+\label{eq: bS}
+2M^4+4 \cdot 11 e^4=N^2
+\end{equation}
+Iz jednadžbe vidimo da $2|N$ $\to N=2L \textrm{ L cijeli broj }$:
+\[2M^4+4 \cdot 11 e^4=4L^2 \Leftrightarrow M^4 +2 \cdot 11 e^4 =2L^2\]
+Sada vidimo da $M^4$ paran, pa jer $M$ cijeli broj slijedi da i $2|M$, pa postoji $K \in \mathbb{Z}$ takav da $M=2K$:
+\begin{align}
+\label{eq:regis}
+2^4 K^4+2 \cdot 11 e^4 &=2 L^2 \to \notag \\
+2^3 K^4+11 e^4 &= L^2
+\end{align}
+Iz zadnje jednadžbe vidimo da $L$ i  $e$ moraju biti iste parnosti:\\
+Ukoliko  $e$ i $L$ parni imamo onda $e=2f, L=2J$ pa slijedi:
+\[2^3 K+ 2^4 \cdot 11 f =2^2 J \to 2K^4+4\cdot 11=J\]
+Zadnji oblik je ekvivalentan jednadžbi \eqref{eq: bS}. Zaključujemo da jednadžba nema netrivijalnih rješenja u $\mathbb{Z}$.
+\item $b_1'= 11 \to$ Jednadžba izgleda:
+\[11 M^4 + 2^3 e^4=N^2\]
+Ima ekvivalentni oblik kao \eqref{eq:regis} pa zaključujemo da nema rješenja.
+\item $b_1'=22 \to$ Jednadžba izgleda:
+\[22 M^4+ 4e^4=N^2\]
+Jedno riješenje je dano sa $(0,1,2)$.
+\end{enumerate}
+Vidimo da imamo riješenje za $2$ $b_1'$ iz čega slijedi da $|Im(\beta)=2$.\\
+Nakon ovako iscrpnog računa, konačno zaključujemo da je:
 
+\[2^r=\frac{|Im(\alpha)||Im(\beta)|}{4}=2 \Rightarrow rank(E(\mathbb{Q}))=1\]
+\newpage
+\subsection{3. zadatak}
+Imamo:
+\begin{align}
+p(x) &= (x - 4)(x - 3)(x - 2)x(x + 1)(x + 2)(x + 3)(x + 4) \\
+\label{eq:polRas}   
+     &= x^8+x^7-29x^6 -29 x^5+244 x^4 + 244 x^3 -576 x^2 - 576 x
+\end{align}
+Znamo da je $\deg r \leq 3$ pa iz toga zaključujemo da su koeficijenti uz $x^4,x^5, x^6, x^7, x^8$ jedanaki za $p(x)$ i za $(q(x))^2$, osim toga zaključujemo da je $\deg q = 4$. Stavimo da je:
+\begin{equation}
+	\label{eq:polinomQ}
+	q(x)=q_4 x^4 + q_3 x^3 + q_2 x^2+ q_1 x+ q_0
+\end{equation}
+\begin{equation}
+\label{eq:polinomR}
+	r(x)=r_3 x^3 + r_2 x^2 + r_1 x+r_0	
+\end{equation}
+
+Iz toga imamo:
+\begin{align}
+\label{eq: q2}
+(q(x))^2=q_4^2 x^8 + 2q_3 q_4 x^7 +(q_3^2 + 2q_2 q_4)x^6+(2q_2q_3 + 2q_1q_4)x^5+ \notag
+\\
+(q_2^2+2q_1q_3+2q_0q_4)x^4+(2q_1q_2+2q_0q_3)x^3+(q_1^2+2q_0q_2)x^2+2q_0q_1 x + q_0^2 
+\end{align}
+\begin{align}
+	p(x)=(q(x))^2-r(x)=q_4^2 x^8 + 2q_3 q_4 x^7 +(q_3^2 + 2q_2 q_4)x^6 \notag \\
+	    (q_2^2+2q_1q_3+2q_0q_4)x^4+(2q_1q_2+2q_0q_3 - r_3)x^3+ \\ (q_1^2+2q_0q_2 - r_2)x^2+(2q_0q_1 -r_1)x + (q_0^2-r_0)  \notag
+\end{align}
+Iz toga slijedi da mora vrijediti:
+\begin{align}
+\label{eq: q4}
+q_4^2=1 \to q_4=\pm 1	
+\end{align}
+Uzimamo $q_4=1$ (da smo uzeli drugačije, dobili bi drugačija rješenja za koeficijente u čijim će se jednadžbama pojavljivati $q_4$, ali to ne bi utjecalo na točnost rješenja, odnosno, rješenja može biti više). Redom ćemo uvrštavati $q_4$ da bi dobili $q_3$, zatim  $q_3$ i $q_4$ za $q_2$,  a onda $q_2, q_3, q_4$ za $q_1$ te na koncu $q_1,q_2, q_3, q_4$ za $q_0$.
+\begin{align}
+\label{eq: qRj}
+2q_3&=1 \to q_3=\frac{1}{2} \notag \\
+\frac{1}{4} + 2q_2&=-29 \to 	q_2=\frac{-117}{8} \notag \\
+\frac{-117}{8} +2q_1&=-29 \to q_1=\frac{-115}{16} \\
+\left(\frac{-117}{8}\right)^2 + \frac{-115}{16}+2q_0 &= 244 \to q_0=\frac{2387}{128} \notag
+\end{align}
+Iz \eqref{eq: q4} i \eqref{eq: qRj} dolazimo do jednadžbi za koeficijente $r_0, r_1, r_2, r_3$:
+\begin{align}
+(2q_1q_2+2q_0q_3 - r_3)=244 \to r_3=\frac{-1935}{128} \notag \\
+ (q_1^2+2q_0q_2 - r_2)=-576 \to r_2 =\frac{42083}{512} \notag \\
+ (2q_0q_1 -r_1)=-576 \to r_2 =\frac{315319}{1024} \\
+ (q_0^2-r_0)=0 \to r_0=\frac{5697769}{16384}  \notag
+\end{align}
+Pa je riješenje dano sa:
+\begin{align*}
+q(x)=x^4 + \frac{1}{2} x^3-\frac{117}{8}x^2-\frac{115}{16}x + \frac{2387}{128} \\[0.5cm]
+r(x)=-\frac{1935}{128} x^3 + \frac{42083}{512} x^2 + \frac{315319}{1024}x + \frac{5697769}{16384}
+\end{align*}
 \end{spacing}
 \newpage
 \nocite{*}
